@@ -1,0 +1,15 @@
+body{
+min-height: 100vh;
+margin: 0;
+display: flex;
+
+}
+.content{
+   background-color:  rgb(199, 197, 197);
+   width: fit-content;
+   margin: auto;
+   text-align: center;
+   padding: 40px;
+   border-radius: 20px;
+   box-shadow: 0 0 8px;
+}

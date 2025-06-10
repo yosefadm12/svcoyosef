@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <link rel="stylesheet" href="main.11.css">
+</head>
+<body>
+  <div id="container">
+    <h1 id="greeting">Hello!</h1>
+  </div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const user = urlParams.get('user') || 'Guest';
+    document.getElementById("greeting").textContent = `Hello ${user}`;
+  </script>
+</body>
+</html>

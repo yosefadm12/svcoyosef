@@ -1,0 +1,27 @@
+body{
+    display: flex;
+    margin: 0;
+    min-height: 100vh;
+}
+.container{
+    display: grid;
+    margin: auto;
+    background-color: brown;
+    padding: 80px;
+    border-radius: 25px;
+    color: rgb(40, 40, 40);
+    width: 80%;
+    height: 60vh;
+    display: grid;
+    grid-template-columns: repeat(4,1fr) ;
+    grid-template-rows: repeat(4,1fr) ;
+
+
+}
+h1{
+    text-align: center;
+    grid-column: 1/5 ;
+    grid-row: 1/2;
+    grid-column: span 4;
+
+}

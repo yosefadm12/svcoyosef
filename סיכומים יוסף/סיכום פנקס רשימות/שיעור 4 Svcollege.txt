@@ -1,0 +1,102 @@
+שיעור 4 Svcollege 
+נראה שהבקשה שלך קשורה לנושאים של **מחרוזות, משתנים, ספריית math והספרייה random, והדפסה (output)**. האם תרצה שאספק לך הסבר על כל אחד מהנושאים האלה בשפת Python? 
+
+אם כן, הנה סיכום קצר של כל אחד מהם:
+
+### 1️⃣ **מחרוזות (Strings)**
+מחרוזות הן רצפים של תווים, מוקפות במירכאות `""` או גרשיים `''`.
+```python
+my_string = "Hello, World!"
+print(my_string)  # הדפסת המחרוזת
+```
+ניתן לחבר מחרוזות (`concatenation`):
+```python
+greeting = "Hello"
+name = "Alice"
+message = greeting + ", " + name + "!"
+print(message)
+```
+
+### 2️⃣ **משתנים (Variables)**
+משתנים הם שמות המייצגים ערכים בזיכרון.
+```python
+x = 10  # מספר שלם
+y = 3.14  # מספר עשרוני
+name = "John"  # מחרוזת
+is_active = True  # משתנה בוליאני
+```
+
+### 3️⃣ **ספריית `math` (פונקציות מתמטיות)**
+הספרייה `math` מספקת פונקציות מתמטיות מוכנות.
+```python
+import math
+
+print(math.sqrt(16))  # שורש ריבועי
+print(math.pi)  # הערך של π
+print(math.sin(math.radians(30)))  # חישוב סינוס של 30 מעלות
+```
+
+### 4️⃣ **ספריית `random` (בחירות אקראיות)**
+הספרייה `random` משמשת להגרלות ומספרים אקראיים.
+```python
+import random
+
+print(random.randint(1, 100))  # מספר שלם אקראי בין 1 ל-100
+print(random.choice(["Apple", "Banana", "Cherry"]))  # בחירת ערך אקראי מרשימה
+print(random.uniform(1.5, 5.5))  # מספר עשרוני אקראי בין 1.5 ל-5.5
+```
+
+### 5️⃣ **הדפסה (`output`)**
+`print()` מדפיסה פלט למסך:
+```python
+name = "Alice"
+age = 25
+print(f"My name is {name} and I am {age} years old.")  # שימוש ב-f-strings
+```
+
+---
+
+🔹 האם תרצה תרגילים או דוגמאות נוספות לכל נושא? 😃
+
+
+
+min-height: 100vh;
+אני רוצה שיתמרכזו נשים טקסט אליין סנטר
+onclik 
+let key = valu
+alert
+ const שם ="bensp"
+prompt
+string
+number
+שפה דינמית 
+var
+min-height: 100vh;	  גובה מינימלי של האלמנט לכל גובה המסך
+text-align: center;	 ממרכז טקסט בתוך אלמנט
+onclick	                 מפעיל פונקציה בעת לחיצה על אלמנט
+let key = value;	 יצירת משתנה שניתן לשנות
+alert()	                 מציג הודעה קופצת
+const                        משתנה קבוע שאי אפשר לשנות
+prompt()	                קלט מהמשתמש בחלונית קופצת
+string	                סוג נתונים למחרוזות (טקסט)
+number	                סוג נתונים למספרים (שלמים או עשרוניים)
+שפה דינמית	       משתנה שיכול לשנות את סוגו בזמן הריצה
+var	                       יצירת משתנה בצורה ישנה ופחות מומלצת
+
+
+ להשתמש בקונסול log K למשל לשים הודעות הנחיה 
+console.log(age)
+
+ספריית מאט math
+רנדום עד 1 ביגלל שהולך לפי הסתברות של 0-1 
+ראונד לעגל מספר 
+ פונקצית פלור מעגלת כלפי מטה 
+סייל מעגלת כלפי מעלה 
+קובץ חדש קונדישן והוא יהיה js 
+יצירת פונקציות 
+השתמשות בכפתור כדי להפעיל פונקציה
+החזרת ערכים בפונקציה על ידי return  הוא גם מפסיק את הפונקציה לכן נציב טרו או פאלס
+
+
+
+

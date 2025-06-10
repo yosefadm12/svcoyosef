@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main12.css">
+    <title>Document</title>
+</head>
+<body>
+    <form id="postForm">
+        <label>
+            <input type="text" name="name" id="name" placeholder="Enter your what you want">
+            <input type="submit" value="Submit">
+        </label>
+    </form>
+    <div id="postResult"></div>
+    <script>
+        document.getElementById("postForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const text = document.getElementById("name").value;
+            fetch("/api/post", {
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({text: text})
+            })
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById("postResult").innerHTML += `
+                  <div class="post-card">
+                  <h3>Post:</h3>
+                  <p>${data.text}</p>
+                  <p>Likes: ${data.likes}</p>
+                  <p>Comments: ${data.comments}</p>
+                  </div>
+                `;
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+body, html {
+  margin: 0;
+  height: 100%;
+}
+
+.split-screen {
+  display: flex;
+  height: 100vh;
+}
+
+.left-btn, .right-btn {
+  flex: 1;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.left-btn {
+  background-color: #007bff; /* כחול */
+}
+
+.right-btn {
+  background-color: #28a745; /* ירוק */
+}

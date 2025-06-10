@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="main.11.css">
+</head>
+<body>
+  <form method="POST" action="/signup" id="signupForm">
+    <label for="username">Username</label><br>
+    <input type="text" name="username" id="username" placeholder="Enter a username..." required><br><br>
+
+    <label for="email">Email address</label><br>
+    <input name="email" id="email" type="email" placeholder="Enter your email address..." required><br><br>
+
+    <label for="password">Password</label><br>
+    <input name="password" id="password" type="password" placeholder="Enter your password..." required><br><br>
+
+    <label for="confirmPassword">Confirm Password</label><br>
+    <input name="confirmPassword" id="confirmPassword" type="password" placeholder="Enter your password again..." required><br><br>
+
+    <button type="submit" class="green">Sign up</button>
+  </form>
+  
+  <script>
+    document.getElementById("signupForm").addEventListener("submit", function(event) {
+      const username = document.getElementById("username").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const confirmPassword = document.getElementById("confirmPassword").value;
+
+      if (username.length < 4 || username.length > 8) {
+        alert("שם המשתמש חייב להיות בין 4 ל-8 תווים");
+        event.preventDefault();
+        return;
+      }
+
+      if (!email.includes("@")) {
+        alert("כתובת אימייל לא תקינה – חייב לכלול @");
+        event.preventDefault();
+        return;
+      }
+
+      if (password.length < 5 || password.length > 10 || !password.includes("$")) {
+        alert("הסיסמה חייבת להיות באורך 5-10 תווים ולכלול את התו $");
+        event.preventDefault();
+        return;
+      }
+
+      if (password !== confirmPassword) {
+        alert("הסיסמה ואישור הסיסמה לא תואמים");
+        event.preventDefault();
+        return;
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+שיעור 5 Svcollege 
+תרגיל 6 איך להדפיס בלעדי הכוכבית 
+function chekString(){
+    const str = "test"
+    if(str.includes("*")){
+      console.log(str.replace("*",""))
+    }
+
+console.log(window)
+
+function calac(a,b){
+    return a+b
+}
+console.log(calac(7,8))
+
+
+
+function fizzBuzz(num){
+  if(num%3==0&&num%5==0){
+    console.log("fizzbuzz")
+
+  }else if(num%5==0){
+    console.log("buzz")
+    
+  }else if(num%3==0){
+    console.log("fizz")
+    
+  }else{
+    console.log(num)
+  }
+}
+
+
+נדבר על לולאות  for whil foreach
+function fizzBuzz1(limit){
+ const lim =  prompt("what is yore gess")
+ for(let i = 0 ; i< lim;i++){
+  if(num%3==0&&num%5==0){
+    console.log("fizzbuzz")
+  
+}else if(num%5==0){
+    console.log("buzz")
+    
+  }else if(num%3==0){
+    console.log("fizz")
+    
+  }else{
+    console.log(num)
+  }
+ }
+}

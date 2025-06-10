@@ -1,0 +1,32 @@
+ol,li,ul{
+    border: 2px solid  black ;   
+}
+img{
+   width: 100px;
+   border-radius: 50px;
+   padding: 24px; 
+}
+div.article-kontiner{
+    border: 2px solid black;
+    padding: 24px;
+}
+button{
+    
+    column-span: 100px;
+    background-color: #420bc2;
+    color: aliceblue;
+    border: none;
+    padding: 6px,20px,6px,20px;
+    border-radius: 8px;
+    transition: all 10ms;
+    
+}
+button:hover{
+    background-color: #8c6cd4;
+    transform: scale(1.2);
+    cursor: pointer ;
+}
+button:active {
+    transform: scale(0.95) translateY(2px); 
+
+  }

@@ -1,0 +1,20 @@
+button {
+    background-color: aqua;
+    color: black;
+    
+    
+}
+button:hover {
+    background-color: #8f39ff;
+    color: white;
+    cursor: pointer;
+}
+body{
+    color: #f0f0f0
+;
+}
+h1 {
+    color: #000000;
+    text-align: center;
+    font-size: 8em;
+}
