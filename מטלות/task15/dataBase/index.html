@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Recipe</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Add New Recipe</h1>
+        <form id="recipeForm">
+            <input type="text" name="name" placeholder="Recipe Name" required>
+            <input type="number" name="calories" placeholder="Calories" required>
+            <input type="text" name="ingredients" placeholder="Ingredients (comma separated)" required>
+            <input type="number" name="cookingTime" placeholder="Cooking Time (minutes)" required>
+            <input type="text" name="instructions" placeholder="Instructions" required>
+            <input type="text" name="imageUrl" placeholder="Image URL">
+            <select name="isVegan" required>
+                <option value="">Is Vegan?</option>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+            <input type="text" name="category" placeholder="Category" required>
+            <input type="number" name="rating" placeholder="Rating (1-5)" min="1" max="5" required>
+            <button type="submit">Add Recipe</button>
+        </form>
+        <p id="message"></p>
+    </div>
+    <script>
+
+        const form = document.getElementById('recipeForm');
+        const message = document.getElementById('message');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+            data.ingredients = data.ingredients.split(',').map(item => item.trim());
+            data.isVegan = data.isVegan === 'true';
+
+            const response = await fetch('/add-recipe', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+            const result = await response.text();
+            message.textContent = result;
+            form.reset();
+        });
+    </script>
+</body>
